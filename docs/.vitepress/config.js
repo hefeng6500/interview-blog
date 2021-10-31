@@ -1,4 +1,5 @@
 module.exports = {
+  base:'/interview-blog/',
   lang: 'zh-CN',
   title: '前端学习记录',
   description: 'hefeng6500 的前端学习笔记，记录学习历程，分享学习总结！',
