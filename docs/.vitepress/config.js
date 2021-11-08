@@ -48,6 +48,10 @@ module.exports = {
                   text: "217.存在重复元素 2021.11.07",
                   link: "/algorithm/array/217.存在重复元素",
                 },
+                {
+                  text: '136.只出现一次的数字 2021.11.08',
+                  link: "/algorithm/array/136.只出现一次的数字",
+                }
               ],
             },
           ],
