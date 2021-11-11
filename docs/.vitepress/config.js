@@ -49,14 +49,17 @@ module.exports = {
                   link: "/algorithm/array/217.存在重复元素",
                 },
                 {
-                  text: '136.只出现一次的数字 2021.11.08',
+                  text: "136.只出现一次的数字 2021.11.08",
                   link: "/algorithm/array/136.只出现一次的数字",
                 },
                 {
-                  
-                  text: '350. 两个数组的交集 II 2021.11.09',
+                  text: "350. 两个数组的交集 II 2021.11.09",
                   link: "/algorithm/array/350. 两个数组的交集 II",
-                }
+                },
+                {
+                  text: "66. 加一 2021.11.10",
+                  link: "/algorithm/array/66.加一",
+                },
               ],
             },
           ],
