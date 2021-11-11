@@ -60,6 +60,10 @@ module.exports = {
                   text: "66. 加一 2021.11.10",
                   link: "/algorithm/array/66.加一",
                 },
+                {
+                  text:'283.移动零 2021.11.11',
+                  link: "/algorithm/array/283.移动零",
+                }
               ],
             },
           ],
