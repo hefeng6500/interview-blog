@@ -63,6 +63,10 @@ module.exports = {
                 {
                   text:'283.移动零 2021.11.11',
                   link: "/algorithm/array/283.移动零",
+                },
+                {
+                  text: '1.两数之和 2021.11.12',
+                  link: "/algorithm/array/1.两数之和",
                 }
               ],
             },
