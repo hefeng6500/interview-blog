@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1. 两数之和 | 前端学习记录</title>
+    <meta name="description" content="hefeng6500 的前端学习笔记，记录学习历程，分享学习总结！">
+    <link rel="stylesheet" href="/interview-blog/assets/style.c5621ecb.css">
+    <link rel="modulepreload" href="/interview-blog/assets/Home.682cdc1f.js">
+    <link rel="modulepreload" href="/interview-blog/assets/app.02450c6d.js">
+    <link rel="modulepreload" href="/interview-blog/assets/algorithm_array_1.两数之和.md.75c49890.lean.js">
+    <link rel="modulepreload" href="/interview-blog/assets/app.02450c6d.js">
+    <meta name="twitter:title" content="1. 两数之和 | 前端学习记录">
+    <meta property="og:title" content="1. 两数之和 | 前端学习记录">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-675d8756><div class="sidebar-button" data-v-675d8756><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/interview-blog/" aria-label="前端学习记录, back to home" data-v-675d8756 data-v-4a583abe><!----> 前端学习记录</a><div class="flex-grow" data-v-675d8756></div><div class="nav" data-v-675d8756><nav class="nav-links" data-v-675d8756 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/" data-v-b8818f8c>首页 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/javascript/" data-v-b8818f8c>javascript <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item active" href="/interview-blog/algorithm/" data-v-b8818f8c>数据结构与算法 <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--]--></header><aside class="sidebar" data-v-83e92a68><nav class="nav-links nav" data-v-83e92a68 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/" data-v-b8818f8c>首页 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/javascript/" data-v-b8818f8c>javascript <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item active" href="/interview-blog/algorithm/" data-v-b8818f8c>数据结构与算法 <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><ul class="sidebar-links" data-v-83e92a68><!--[--><li class="sidebar-link"><p class="sidebar-link-item">数据结构</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/1">栈</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/2">队列</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">算法</p><ul class="sidebar-links"><li class="sidebar-link"><p class="sidebar-link-item">数组</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/217.存在重复元素">217.存在重复元素 2021.11.07</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/136.只出现一次的数字">136.只出现一次的数字 2021.11.08</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/350. 两个数组的交集 II">350. 两个数组的交集 II 2021.11.09</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/66.加一">66. 加一 2021.11.10</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/283.移动零">283.移动零 2021.11.11</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item active" href="/interview-blog/algorithm/array/1.两数之和">1.两数之和 2021.11.12</a><!----></li></ul></li></ul></li><!--]--></ul><!--[--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main class="page" data-v-7eddb2c4><div class="container" data-v-7eddb2c4><!--[--><!--]--><div style="position:relative;" class="content" data-v-7eddb2c4><div><h1 id="_1-两数之和" tabindex="-1">1. 两数之和 <a class="header-anchor" href="#_1-两数之和" aria-hidden="true">#</a></h1><!--[--><div class="tag primary" data-v-360cacb3><!--[-->数组<!--]--></div><div class="tag success" data-v-360cacb3><!--[-->哈希表<!--]--></div><!--]--><p>给定一个整数数组 nums  和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那   两个   整数，并返回它们的数组下标。</p><p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p><p>你可以按任意顺序返回答案。</p><p>示例 1：</p><div class="language-"><pre><code>输入：nums = [2,7,11,15], target = 9
+输出：[0,1]
+解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
+</code></pre></div><p>示例 2：</p><div class="language-"><pre><code>输入：nums = [3,2,4], target = 6
+输出：[1,2]
+</code></pre></div><p>示例 3：</p><div class="language-"><pre><code>输入：nums = [3,3], target = 6
+输出：[0,1]
+</code></pre></div><p>提示：</p><div class="language-"><pre><code>2 &lt;= nums.length &lt;= 104
+-109 &lt;= nums[i] &lt;= 109
+-109 &lt;= target &lt;= 109
+</code></pre></div><p>只会存在一个有效答案</p><p>进阶：你可以想出一个时间复杂度小于 O(n2) 的算法吗？</p><h3 id="解法" tabindex="-1">解法 <a class="header-anchor" href="#解法" aria-hidden="true">#</a></h3><p><strong>1、哈希表</strong></p><div class="language-js"><pre><code><span class="token comment">/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">twoSum</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums<span class="token punctuation">,</span> target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>map<span class="token punctuation">[</span>target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">[</span>map<span class="token punctuation">[</span>target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      map<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>2、暴力循环</strong></p><div class="language-js"><pre><code><span class="token comment">/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">twoSum</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums<span class="token punctuation">,</span> target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">===</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>3、双指针</strong></p><div class="language-js"><pre><code><span class="token comment">/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">twoSum</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums<span class="token punctuation">,</span> target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!==</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">===</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      i<span class="token operator">++</span><span class="token punctuation">;</span>
+      j <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    j<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><!----></div></footer><div class="next-and-prev-link" data-v-7eddb2c4 data-v-38ede35f><div class="container" data-v-38ede35f><div class="prev" data-v-38ede35f><a class="link" href="/interview-blog/algorithm/array/283.移动零" data-v-38ede35f><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-prev" data-v-38ede35f><path d="M19,11H7.4l5.3-5.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-7,7c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.2-0.1,0.5,0,0.8c0.1,0.1,0.1,0.2,0.2,0.3l7,7c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L7.4,13H19c0.6,0,1-0.4,1-1S19.6,11,19,11z"></path></svg><span class="text" data-v-38ede35f>283.移动零 2021.11.11</span></a></div><div class="next" data-v-38ede35f><!----></div></div></div><!--[--><!--[--><div id="gitalk-container"></div><!--]--><!--[--><!----><!--]--><!--]--></div></main></div><!----><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"algorithm_1.md\":\"30c0c631\",\"algorithm_2.md\":\"381ca572\",\"algorithm_array_1.两数之和.md\":\"75c49890\",\"algorithm_array_136.只出现一次的数字.md\":\"b62976fb\",\"algorithm_array_217.存在重复元素.md\":\"71ff2920\",\"algorithm_array_283.移动零.md\":\"5a48ceba\",\"algorithm_array_350. 两个数组的交集 ii.md\":\"444cf435\",\"algorithm_array_66.加一.md\":\"aee87785\",\"algorithm_index.md\":\"b29b79db\",\"index.md\":\"f138b473\",\"javascript_1.md\":\"56d333e6\",\"javascript_10.md\":\"d5d792ed\",\"javascript_2.md\":\"194b1d4a\",\"javascript_3.md\":\"1346ba21\",\"javascript_4.md\":\"120907ad\",\"javascript_5.md\":\"e59ab64c\",\"javascript_6.md\":\"f0b453af\",\"javascript_7.md\":\"5c5892d1\",\"javascript_8.md\":\"fc0a332d\",\"javascript_9.md\":\"433f01b0\",\"javascript_index.md\":\"d40c4d7f\"}")</script>
+    <script type="module" async src="/interview-blog/assets/app.02450c6d.js"></script>
+    
+  </body>
+</html>
