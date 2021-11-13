@@ -10,6 +10,11 @@
     "serve": "vitepress serve docs"
   },
   "devDependencies": {
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
     "vitepress": "^0.20.0"
+  },
+  "dependencies": {
+    "gitalk": "^1.7.2"
   }
 }
