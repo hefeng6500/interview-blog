@@ -4,7 +4,7 @@
 set -e
 
 # 生成静态文件
-npm run build
+npm run build:comment
 
 # 进入生成的文件夹
 cd docs/.vitepress/dist
@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'from local deploy'
 
-git push -f git@github.com:hefeng6500/interview-blog.git gh-pages
+git push -f git@github.com:hefeng6500/interview-blog.git master:gh-pages
 
 cd -
