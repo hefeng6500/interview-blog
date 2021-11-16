@@ -5,9 +5,14 @@
 <script>
 import Gitalk from 'gitalk'
 import 'gitalk/dist/gitalk.css'
-import md5 from "md5"
+
 
 export default {
+  props: {
+    id: {
+      type: String
+    }
+  },
   mounted() {
     const gitalk = new Gitalk({
       clientID: '8760b254461e3650fc51',
@@ -15,7 +20,7 @@ export default {
       repo: 'interview-blog',
       owner: 'hefeng6500',
       admin: ['hefeng6500'],
-      id: md5(location.pathname),
+      id: this.id,
       distractionFreeMode: false
     })
 
@@ -26,9 +31,4 @@ export default {
   }
 }
 </script>
- 
- <Comment /> 
- 
- 
- <Comment /> 
  
