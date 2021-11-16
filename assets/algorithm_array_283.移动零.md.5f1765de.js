@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>283. 移动零 | 前端学习记录</title>
-    <meta name="description" content="hefeng6500 的前端学习笔记，记录学习历程，分享学习总结！">
-    <link rel="stylesheet" href="/interview-blog/assets/style.e77db3e6.css">
-    <link rel="modulepreload" href="/interview-blog/assets/Home.f28e972d.js">
-    <link rel="modulepreload" href="/interview-blog/assets/app.e4eb81c9.js">
-    <link rel="modulepreload" href="/interview-blog/assets/algorithm_array_283.移动零.md.5f1765de.lean.js">
-    <link rel="modulepreload" href="/interview-blog/assets/app.e4eb81c9.js">
-    <meta name="twitter:title" content="283. 移动零 | 前端学习记录">
-    <meta property="og:title" content="283. 移动零 | 前端学习记录">
-  </head>
-  <body>
-    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-675d8756><div class="sidebar-button" data-v-675d8756><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/interview-blog/" aria-label="前端学习记录, back to home" data-v-675d8756 data-v-4a583abe><!----> 前端学习记录</a><div class="flex-grow" data-v-675d8756></div><div class="nav" data-v-675d8756><nav class="nav-links" data-v-675d8756 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/" data-v-b8818f8c>首页 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/javascript/" data-v-b8818f8c>javascript <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item active" href="/interview-blog/algorithm/" data-v-b8818f8c>数据结构与算法 <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--]--></header><aside class="sidebar" data-v-83e92a68><nav class="nav-links nav" data-v-83e92a68 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/" data-v-b8818f8c>首页 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/javascript/" data-v-b8818f8c>javascript <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item active" href="/interview-blog/algorithm/" data-v-b8818f8c>数据结构与算法 <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><ul class="sidebar-links" data-v-83e92a68><!--[--><li class="sidebar-link"><p class="sidebar-link-item">数据结构</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/1">栈</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/2">队列</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">算法</p><ul class="sidebar-links"><li class="sidebar-link"><p class="sidebar-link-item">数组</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/217.存在重复元素">217.存在重复元素 2021.11.07</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/136.只出现一次的数字">136.只出现一次的数字 2021.11.08</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/350. 两个数组的交集 II">350. 两个数组的交集 II 2021.11.09</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/66.加一">66. 加一 2021.11.10</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item active" href="/interview-blog/algorithm/array/283.移动零">283.移动零 2021.11.11</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/1.两数之和">1.两数之和 2021.11.12</a><!----></li></ul></li></ul></li><!--]--></ul><!--[--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main class="page" data-v-7eddb2c4><div class="container" data-v-7eddb2c4><!--[--><!--]--><div style="position:relative;" class="content" data-v-7eddb2c4><div><h1 id="_283-移动零" tabindex="-1">283. 移动零 <a class="header-anchor" href="#_283-移动零" aria-hidden="true">#</a></h1><p>给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。</p><p>示例:</p><div class="language-"><pre><code>输入: [0,1,0,3,12]
-输出: [1,3,12,0,0]
-</code></pre></div><p>说明:</p><p>必须在原数组上操作，不能拷贝额外的数组。</p><p>尽量减少操作次数。</p><h3 id="解法" tabindex="-1">解法 <a class="header-anchor" href="#解法" aria-hidden="true">#</a></h3><p><strong>1、双指针(2021.11.11 自己的解法)</strong></p><div class="language-js"><pre><code><span class="token comment">/**
+import{_ as n,c as s,o as a,h as p}from"./app.e4eb81c9.js";const y='{"title":"283. \u79FB\u52A8\u96F6","description":"","frontmatter":{},"headers":[{"level":3,"title":"\u89E3\u6CD5","slug":"\u89E3\u6CD5"}],"relativePath":"algorithm/array/283.\u79FB\u52A8\u96F6.md","lastUpdated":1637072780300}',t={},o=p(`<h1 id="_283-\u79FB\u52A8\u96F6" tabindex="-1">283. \u79FB\u52A8\u96F6 <a class="header-anchor" href="#_283-\u79FB\u52A8\u96F6" aria-hidden="true">#</a></h1><p>\u7ED9\u5B9A\u4E00\u4E2A\u6570\u7EC4 nums\uFF0C\u7F16\u5199\u4E00\u4E2A\u51FD\u6570\u5C06\u6240\u6709 0 \u79FB\u52A8\u5230\u6570\u7EC4\u7684\u672B\u5C3E\uFF0C\u540C\u65F6\u4FDD\u6301\u975E\u96F6\u5143\u7D20\u7684\u76F8\u5BF9\u987A\u5E8F\u3002</p><p>\u793A\u4F8B:</p><div class="language-"><pre><code>\u8F93\u5165: [0,1,0,3,12]
+\u8F93\u51FA: [1,3,12,0,0]
+</code></pre></div><p>\u8BF4\u660E:</p><p>\u5FC5\u987B\u5728\u539F\u6570\u7EC4\u4E0A\u64CD\u4F5C\uFF0C\u4E0D\u80FD\u62F7\u8D1D\u989D\u5916\u7684\u6570\u7EC4\u3002</p><p>\u5C3D\u91CF\u51CF\u5C11\u64CD\u4F5C\u6B21\u6570\u3002</p><h3 id="\u89E3\u6CD5" tabindex="-1">\u89E3\u6CD5 <a class="header-anchor" href="#\u89E3\u6CD5" aria-hidden="true">#</a></h3><p><strong>1\u3001\u53CC\u6307\u9488(2021.11.11 \u81EA\u5DF1\u7684\u89E3\u6CD5)</strong></p><div class="language-js"><pre><code><span class="token comment">/**
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */</span>
@@ -42,10 +26,10 @@
   <span class="token keyword">return</span> nums<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token comment">// 执行用时：100 ms, 在所有 JavaScript 提交中击败了35.22%的用户</span>
-<span class="token comment">// 内存消耗：42.7 MB, 在所有 JavaScript 提交中击败了8.63%的用户</span>
-<span class="token comment">// 通过测试用例：74 / 74</span>
-</code></pre></div><p><strong>2、把非 0 的往前挪</strong></p><p>把非 0 的往前挪，挪完之后，后面的就都是 0 了，然后在用 0 覆盖后面的</p><div class="language-js"><pre><code><span class="token comment">/**
+<span class="token comment">// \u6267\u884C\u7528\u65F6\uFF1A100 ms, \u5728\u6240\u6709 JavaScript \u63D0\u4EA4\u4E2D\u51FB\u8D25\u4E8635.22%\u7684\u7528\u6237</span>
+<span class="token comment">// \u5185\u5B58\u6D88\u8017\uFF1A42.7 MB, \u5728\u6240\u6709 JavaScript \u63D0\u4EA4\u4E2D\u51FB\u8D25\u4E868.63%\u7684\u7528\u6237</span>
+<span class="token comment">// \u901A\u8FC7\u6D4B\u8BD5\u7528\u4F8B\uFF1A74 / 74</span>
+</code></pre></div><p><strong>2\u3001\u628A\u975E 0 \u7684\u5F80\u524D\u632A</strong></p><p>\u628A\u975E 0 \u7684\u5F80\u524D\u632A\uFF0C\u632A\u5B8C\u4E4B\u540E\uFF0C\u540E\u9762\u7684\u5C31\u90FD\u662F 0 \u4E86\uFF0C\u7136\u540E\u5728\u7528 0 \u8986\u76D6\u540E\u9762\u7684</p><div class="language-js"><pre><code><span class="token comment">/**
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */</span>
@@ -67,16 +51,16 @@
   <span class="token punctuation">}</span>
   <span class="token keyword">return</span> nums<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre></div><p><strong>3、双指针法</strong></p><div class="language-js"><pre><code><span class="token comment">/**
+</code></pre></div><p><strong>3\u3001\u53CC\u6307\u9488\u6CD5</strong></p><div class="language-js"><pre><code><span class="token comment">/**
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */</span>
 <span class="token keyword">var</span> <span class="token function-variable function">moveZeroes</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
   <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">//只要不为0就往前挪</span>
+    <span class="token comment">//\u53EA\u8981\u4E0D\u4E3A0\u5C31\u5F80\u524D\u632A</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token comment">//i指向的值和j指向的值交换</span>
+      <span class="token comment">//i\u6307\u5411\u7684\u503C\u548Cj\u6307\u5411\u7684\u503C\u4EA4\u6362</span>
       <span class="token keyword">let</span> temp <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
       nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
       nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
@@ -85,9 +69,4 @@
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre></div></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><!----></div></footer><div class="next-and-prev-link" data-v-7eddb2c4 data-v-38ede35f><div class="container" data-v-38ede35f><div class="prev" data-v-38ede35f><a class="link" href="/interview-blog/algorithm/array/66.加一" data-v-38ede35f><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-prev" data-v-38ede35f><path d="M19,11H7.4l5.3-5.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-7,7c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.2-0.1,0.5,0,0.8c0.1,0.1,0.1,0.2,0.2,0.3l7,7c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L7.4,13H19c0.6,0,1-0.4,1-1S19.6,11,19,11z"></path></svg><span class="text" data-v-38ede35f>66. 加一 2021.11.10</span></a></div><div class="next" data-v-38ede35f><a class="link" href="/interview-blog/algorithm/array/1.两数之和" data-v-38ede35f><span class="text" data-v-38ede35f>1.两数之和 2021.11.12</span><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-next" data-v-38ede35f><path d="M19.9,12.4c0.1-0.2,0.1-0.5,0-0.8c-0.1-0.1-0.1-0.2-0.2-0.3l-7-7c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.3,5.3H5c-0.6,0-1,0.4-1,1s0.4,1,1,1h11.6l-5.3,5.3c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l7-7C19.8,12.6,19.9,12.5,19.9,12.4z"></path></svg></a></div></div></div><!--[--><!--]--></div></main></div><!----><!--]--></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"algorithm_1.md\":\"712973f9\",\"algorithm_2.md\":\"911594ae\",\"algorithm_array_1.两数之和.md\":\"2d84c3f4\",\"algorithm_array_136.只出现一次的数字.md\":\"5662f746\",\"algorithm_array_217.存在重复元素.md\":\"5a280496\",\"algorithm_array_283.移动零.md\":\"5f1765de\",\"algorithm_array_350. 两个数组的交集 ii.md\":\"cc5a4b71\",\"algorithm_array_66.加一.md\":\"670ec244\",\"algorithm_index.md\":\"065840fb\",\"index.md\":\"df659a56\",\"javascript_1.md\":\"fa6ce24c\",\"javascript_10.md\":\"b79165f4\",\"javascript_2.md\":\"6e85375b\",\"javascript_3.md\":\"7f001288\",\"javascript_4.md\":\"79db2601\",\"javascript_5.md\":\"087ad97a\",\"javascript_6.md\":\"619d16cf\",\"javascript_7.md\":\"06d73c1b\",\"javascript_8.md\":\"21ff3252\",\"javascript_9.md\":\"e7cf7890\",\"javascript_index.md\":\"f8aede20\"}")</script>
-    <script type="module" async src="/interview-blog/assets/app.e4eb81c9.js"></script>
-    
-  </body>
-</html>
+</code></pre></div>`,15),e=[o];function c(u,l,k,r,i,m){return a(),s("div",null,e)}var _=n(t,[["render",c]]);export{y as __pageData,_ as default};
