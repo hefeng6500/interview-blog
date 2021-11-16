@@ -11,13 +11,17 @@ const { Layout } = DefaultTheme;
 
 let enableComment = ref(false);
 
-watch(route, async (newValue) => {
-  enableComment.value = false;
+watch(
+  route,
+  async (newValue) => {
+    enableComment.value = false;
 
-  await nextTick();
+    await nextTick();
 
-  enableComment.value = true;
-});
+    enableComment.value = true;
+  },
+  { immediate: true }
+);
 </script>
 
 <template>
