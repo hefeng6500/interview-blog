@@ -20,7 +20,7 @@ watch(
 
     enableComment.value = true;
   },
-  { immediate: true }
+  { immediate: true, deep: true }
 );
 </script>
 
