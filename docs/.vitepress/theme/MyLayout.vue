@@ -1,33 +1,30 @@
 <script setup>
-import { ref, watch, nextTick } from "vue";
-import { useRouter } from "vitepress";
+import { watch, nextTick, ref } from "vue";
 import DefaultTheme from "vitepress/theme";
 import Comment from "../../components/comment/index.vue";
-import md5 from "md5";
+import { useRouter } from "vitepress";
 
-const { route } = useRouter();
-const id = md5(route.path);
 const { Layout } = DefaultTheme;
-
-let enableComment = ref(false);
+const enableComment = ref(true);
+let { route } = useRouter();
 
 watch(
   route,
-  async (newValue) => {
+  async function (newValue) {
     enableComment.value = false;
-
-    await nextTick();
-
-    enableComment.value = true;
+    nextTick(() => {
+      console.log("will render");
+      enableComment.value = true;
+    });
   },
-  { immediate: true, deep: true }
+  { immediate: true }
 );
 </script>
 
 <template>
   <Layout>
-    <template #page-bottom>
-      <Comment v-if="enableComment" />
+    <template #page-bottom v-if="enableComment">
+      <Comment />
     </template>
   </Layout>
 </template>
