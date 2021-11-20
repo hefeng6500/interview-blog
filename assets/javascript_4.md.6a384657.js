@@ -1,0 +1,1 @@
+import{_ as t,c as a,o as e}from"./app.fc2e1a48.js";const f='{"title":"","description":"","frontmatter":{},"relativePath":"javascript/10.md","lastUpdated":1637380845339}',r={};function c(o,s,p,n,_,i){return e(),a("div")}var l=t(r,[["render",c]]);export{f as __pageData,l as default};
