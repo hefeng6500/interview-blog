@@ -71,6 +71,10 @@ module.exports = {
                 {
                   text: "36.有效的数独 2021.11.21",
                   link: "/algorithm/array/36.有效的数独",
+                },
+                {
+                  text: '48.旋转图像 2021.11.21',
+                  link: "/algorithm/array/48.旋转图像",
                 }
               ],
             },
