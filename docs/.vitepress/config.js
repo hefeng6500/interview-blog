@@ -68,6 +68,10 @@ module.exports = {
                   text: "1.两数之和 2021.11.12",
                   link: "/algorithm/array/1.两数之和",
                 },
+                {
+                  text: "36.有效的数独 2021.11.21",
+                  link: "/algorithm/array/36.有效的数独",
+                }
               ],
             },
           ],

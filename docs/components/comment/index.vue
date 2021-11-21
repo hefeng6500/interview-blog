@@ -30,3 +30,9 @@ const renderComment = () => {
   gitalk.render("gitalk-container");
 };
 </script>
+
+<style scoped>
+:deep(.gt-meta) {
+  z-index: 1;
+}
+</style>

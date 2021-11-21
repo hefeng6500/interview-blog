@@ -38,8 +38,8 @@ const className = computed(() => {
     color: #fff;
   }
 
-  &.info {
-    background-color: rgb(45, 183, 245);
+  &.darkorchid {
+    background-color:darkorchid;
     color: #fff;
   }
 }

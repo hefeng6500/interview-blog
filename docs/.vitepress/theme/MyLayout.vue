@@ -23,7 +23,7 @@ watch(
 
 <template>
   <Layout>
-    <template #page-bottom v-if="enableComment">
+    <template v-if="enableComment" #page-bottom>
       <Comment />
     </template>
   </Layout>
