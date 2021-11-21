@@ -22,8 +22,5 @@ watch(
 
 <template>
   <Layout>
-    <template v-if="enableComment" #page-bottom>
-      <Comment />
-    </template>
   </Layout>
 </template>
