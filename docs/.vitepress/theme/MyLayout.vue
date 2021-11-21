@@ -13,7 +13,6 @@ watch(
   async function (newValue) {
     enableComment.value = false;
     nextTick(() => {
-      console.log("will render");
       enableComment.value = true;
     });
   },
