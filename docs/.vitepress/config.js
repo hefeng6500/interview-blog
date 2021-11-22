@@ -73,13 +73,18 @@ module.exports = {
                   link: "/algorithm/array/36.有效的数独",
                 },
                 {
-                  text: '48.旋转图像 2021.11.21',
+                  text: "48.旋转图像 2021.11.21",
                   link: "/algorithm/array/48.旋转图像",
                 },
+              ],
+            },
+            {
+              text: "字符串",
+              children: [
                 {
-                  text: '344.反转字符串 2021.11.22',
-                  link: "/algorithm/array/344.反转字符串",
-                }
+                  text: "344.反转字符串 2021.11.22",
+                  link: "/algorithm/string/344.反转字符串",
+                },
               ],
             },
           ],
