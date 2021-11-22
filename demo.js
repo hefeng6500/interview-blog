@@ -1,53 +1,66 @@
-const matrix = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-];
+s = ["h", "e", "l", "l", "o"];
+
+// /**
+//  * @param {character[]} s
+//  * @return {void} Do not return anything, modify s in-place instead.
+//  */
+// var reverseString = function (s) {
+//   let left = 0;
+//   let right = s.length - 1;
+
+//   const swap = (s, left, right) => {
+//     const temp = s[left];
+//     s[left] = s[right];
+//     s[right] = temp;
+//   };
+
+//   while (left < right) {
+//     swap(s, left++, right--);
+//   }
+// };
+
+// /**
+//  * @param {character[]} s
+//  * @return {void} Do not return anything, modify s in-place instead.
+//  */
+// var reverseString = function (s) {
+//   const swap = (s, i, j) => {
+//     const temp = s[i];
+//     s[i] = s[j];
+//     s[j] = temp;
+//   };
+
+//   for (let i = 0; i < s.length / 2; i++) {
+//     swap(s, i, s.length - 1 - i);
+//   }
+// };
 
 /**
- * @param {number[][]} matrix
- * @return {void} Do not return anything, modify matrix in-place instead.
+ * @param {character[]} s
+ * @return {void} Do not return anything, modify s in-place instead.
  */
-var rotate = function (matrix) {
-  const length = matrix.length;
-
-  // 先上下交换
-  for (let i = 0; i < length / 2; i++) {
-    const temp = matrix[i];
-    matrix[i] = matrix[length - i - 1];
-    matrix[length - i - 1] = temp;
+var reverseString = function (s) {
+  if (s == null || s.length === 0) {
+    return;
   }
-
-  // 在按照对角线交换
-  for (let i = 0; i < length; i++) {
-    for (let j = i + 1; j < length; j++) {
-      const temp = matrix[i][j];
-
-      matrix[i][j] = matrix[j][i];
-      matrix[j][i] = temp;
+  
+  const swap = (s, i, j) => {
+    const temp = s[i];
+    s[i] = s[j];
+    s[j] = temp;
+  };
+  
+  const reverseStringHelper = (s, left, right) => {
+    if (left >= right) {
+      return;
     }
-  }
+    swap(s, left, right);
+    reverseStringHelper(s, ++left, --right);
+  };
+
+  reverseStringHelper(s, 0, s.length - 1);
 };
 
-/**
- * @param {number[][]} matrix
- * @return {void} Do not return anything, modify matrix in-place instead.
- */
-var rotate = function (matrix) {
-  const length = matrix.length;
+reverseString(s)
 
-  for (let i = 0; i < length / 2; i++)
-    for (let j = i; j < length - i - 1; j++) {
-      let temp = matrix[i][j];
-      let m = length - j - 1;
-      let n = length - i - 1;
-      matrix[i][j] = matrix[m][i];
-      matrix[m][i] = matrix[n][m];
-      matrix[n][m] = matrix[j][n];
-      matrix[j][n] = temp;
-    }
-};
-
-rotate(matrix)
-
-console.log(matrix);
+console.log(s);

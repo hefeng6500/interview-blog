@@ -75,6 +75,10 @@ module.exports = {
                 {
                   text: '48.旋转图像 2021.11.21',
                   link: "/algorithm/array/48.旋转图像",
+                },
+                {
+                  text: '344.反转字符串 2021.11.22',
+                  link: "/algorithm/array/344.反转字符串",
                 }
               ],
             },
