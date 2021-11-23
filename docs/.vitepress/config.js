@@ -89,6 +89,10 @@ module.exports = {
                   text: "7.整数反转 2021.11.23",
                   link: "/algorithm/string/7.整数反转",
                 },
+                {
+                  text: "387.字符串中的第一个唯一字符 2021.11.23",
+                  link: "/algorithm/string/387.字符串中的第一个唯一字符",
+                }
               ],
             },
           ],
