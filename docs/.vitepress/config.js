@@ -85,6 +85,10 @@ module.exports = {
                   text: "344.反转字符串 2021.11.22",
                   link: "/algorithm/string/344.反转字符串",
                 },
+                {
+                  text: "7.整数反转 2021.11.23",
+                  link: "/algorithm/string/7.整数反转",
+                },
               ],
             },
           ],
