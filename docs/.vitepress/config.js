@@ -92,6 +92,10 @@ module.exports = {
                 {
                   text: "387.字符串中的第一个唯一字符 2021.11.23",
                   link: "/algorithm/string/387.字符串中的第一个唯一字符",
+                },
+                {
+                  text: "242.有效的字母异位词 2021.11.24",
+                  link: "/algorithm/string/242.有效的字母异位词",
                 }
               ],
             },
