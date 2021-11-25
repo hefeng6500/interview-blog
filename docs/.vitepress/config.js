@@ -96,6 +96,10 @@ module.exports = {
                 {
                   text: "242.有效的字母异位词 2021.11.24",
                   link: "/algorithm/string/242.有效的字母异位词",
+                },
+                {
+                  text: "125.验证回文串 2021.11.25",
+                  link: "/algorithm/string/125.验证回文串",
                 }
               ],
             },
