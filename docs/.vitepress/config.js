@@ -100,6 +100,9 @@ module.exports = {
                 {
                   text: "125.验证回文串 2021.11.25",
                   link: "/algorithm/string/125.验证回文串",
+                }, {
+                  text: "8.字符串转换整数 (atoi) 2021.11.27",
+                  link: "/algorithm/string/8.字符串转换整数 (atoi)",
                 }
               ],
             },

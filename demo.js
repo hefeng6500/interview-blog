@@ -1,28 +1,17 @@
+
 /**
- * @param {string} s
- * @return {boolean}
+ * @param {string} str
+ * @return {number}
  */
-var isPalindrome = function (s) {
-  const reg = /[a-zA-Z0-9]/;
+ var myAtoi = function(str) {
+  const number = parseInt(str, 10);
 
-  const isPalindromeHelper = function (s, left, right) {
-    if (left >= right) {
-      return true;
-    }
-    while (left < right && !reg.test(s[left])) {
-      left++;
-    }
-    while (left < right && !reg.test(s[right])) {
-      right--;
-    }
-
-    return (
-      s[left].toLocaleLowerCase() === s[right].toLocaleLowerCase() &&
-      isPalindromeHelper(s, ++left, --right)
-    );
-  };
-
-  return isPalindromeHelper(s, 0, s.length - 1);
+  if(isNaN(number)) {
+      return 0;
+  } else if (number < Math.pow(-2, 31) || number > Math.pow(2, 31) - 1) {
+      return number < Math.pow(-2, 31) ? Math.pow(-2, 31) : Math.pow(2, 31) - 1;
+  } else {
+      return number;
+  }
 };
 
-console.log(isPalindrome("A man, a plan, a canal: Panama"));
