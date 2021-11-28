@@ -1,34 +1,14 @@
-/**
- * @param {number} n
- * @return {string}
- */
-var countAndSay = function (n) {
-  const countAndSayHelper = (n) => {
-    if (n === 1) {
-      return "1";
+function longestCommonPrefix(strs) {
+  if (strs == null || strs.length == 0) return "";
+  let pre = strs[0];
+  let i = 1;
+  while (i < strs.length) {
+    while (strs[i].indexOf(pre) != 0) {
+      pre = pre.substring(0, pre.length - 1);
     }
+    i++;
+  }
+  return pre;
+}
 
-    const data = countAndSayHelper(n - 1);
-    const descFn = (data) => {
-      let i = 0;
-      let j = 1;
-      let str = "";
-      while (i < data.length) {
-        if (data[i] === data[j]) {
-          j++;
-        } else {
-          str = str + (j - i) + data[i];
-          i = j;
-          j++;
-        }
-      }
-      return str;
-    };
-
-    return descFn(data);
-  };
-
-  return countAndSayHelper(n);
-};
-
-console.log(countAndSay(7));
+console.log(longestCommonPrefix(["flower","flow","flight"]));

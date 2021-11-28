@@ -107,6 +107,11 @@ module.exports = {
                 {
                   text: "38.外观数列 2021.11.28",
                   link: "/algorithm/string/38.外观数列",
+                },
+                {
+                  
+                  text: "14.最长公共前缀 2021.11.28",
+                  link: "/algorithm/string/14.最长公共前缀",
                 }
               ],
             },
