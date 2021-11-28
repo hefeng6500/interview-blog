@@ -103,6 +103,10 @@ module.exports = {
                 }, {
                   text: "8.字符串转换整数 (atoi) 2021.11.27",
                   link: "/algorithm/string/8.字符串转换整数 (atoi)",
+                },
+                {
+                  text: "38.外观数列 2021.11.28",
+                  link: "/algorithm/string/38.外观数列",
                 }
               ],
             },

@@ -1,17 +1,34 @@
-
 /**
- * @param {string} str
- * @return {number}
+ * @param {number} n
+ * @return {string}
  */
- var myAtoi = function(str) {
-  const number = parseInt(str, 10);
+var countAndSay = function (n) {
+  const countAndSayHelper = (n) => {
+    if (n === 1) {
+      return "1";
+    }
 
-  if(isNaN(number)) {
-      return 0;
-  } else if (number < Math.pow(-2, 31) || number > Math.pow(2, 31) - 1) {
-      return number < Math.pow(-2, 31) ? Math.pow(-2, 31) : Math.pow(2, 31) - 1;
-  } else {
-      return number;
-  }
+    const data = countAndSayHelper(n - 1);
+    const descFn = (data) => {
+      let i = 0;
+      let j = 1;
+      let str = "";
+      while (i < data.length) {
+        if (data[i] === data[j]) {
+          j++;
+        } else {
+          str = str + (j - i) + data[i];
+          i = j;
+          j++;
+        }
+      }
+      return str;
+    };
+
+    return descFn(data);
+  };
+
+  return countAndSayHelper(n);
 };
 
+console.log(countAndSay(7));
