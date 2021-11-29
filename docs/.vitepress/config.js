@@ -119,8 +119,13 @@ module.exports = {
               text: '链表',
               children: [
                 {
-                  text: '237.删除链表中的节点',
+                  text: '237.删除链表中的节点 2021.11.29',
                   link: '/algorithm/link-list/237.删除链表中的节点'
+                },
+                {
+                  // 19.删除链表的倒数第 N 个结点
+                  text: '19.删除链表的倒数第 N 个结点 2021.11.29',
+                  link: '/algorithm/link-list/19.删除链表的倒数第 N 个结点'
                 }
               ]
             }
