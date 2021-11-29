@@ -1,0 +1,1 @@
+import{_ as t,c as a,o as e}from"./app.bdff215d.js";const f='{"title":"","description":"","frontmatter":{},"relativePath":"javascript/10.md","lastUpdated":1638190081213}',r={};function o(s,c,p,n,_,d){return e(),a("div")}var l=t(r,[["render",o]]);export{f as __pageData,l as default};
