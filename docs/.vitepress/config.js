@@ -34,8 +34,8 @@ module.exports = {
         {
           text: "数据结构",
           children: [
-            { text: "栈", link: "/algorithm/1" },
-            { text: "队列", link: "/algorithm/2" },
+            { text: "栈", link: "/data-structures/stack" },
+            { text: "队列", link: "/data-structures/queue" },
           ],
         },
         {
@@ -100,7 +100,8 @@ module.exports = {
                 {
                   text: "125.验证回文串 2021.11.25",
                   link: "/algorithm/string/125.验证回文串",
-                }, {
+                },
+                {
                   text: "8.字符串转换整数 (atoi) 2021.11.27",
                   link: "/algorithm/string/8.字符串转换整数 (atoi)",
                 },
@@ -109,15 +110,24 @@ module.exports = {
                   link: "/algorithm/string/38.外观数列",
                 },
                 {
-                  
                   text: "14.最长公共前缀 2021.11.28",
                   link: "/algorithm/string/14.最长公共前缀",
-                }
+                },
               ],
             },
+            {
+              text: '链表',
+              children: [
+                {
+                  text: '237.删除链表中的节点',
+                  link: '/algorithm/link-list/237.删除链表中的节点'
+                }
+              ]
+            }
           ],
         },
       ],
+      
     },
   },
 };
