@@ -126,6 +126,10 @@ module.exports = {
                   // 19.删除链表的倒数第 N 个结点
                   text: '19.删除链表的倒数第 N 个结点 2021.11.29',
                   link: '/algorithm/link-list/19.删除链表的倒数第 N 个结点'
+                },
+                {
+                  text: '206.反转链表 2021.12.03',
+                  link: '/algorithm/link-list/206.反转链表'
                 }
               ]
             }
