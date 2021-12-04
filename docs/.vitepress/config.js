@@ -9,7 +9,7 @@ module.exports = {
       { text: "javascript", link: "/javascript/" },
       { text: "数据结构与算法", link: "/algorithm/" },
       {
-        text: "github",
+        text: "GitHub",
         link: "https://github.com/hefeng6500/interview-blog",
         isExternal: true,
       },
