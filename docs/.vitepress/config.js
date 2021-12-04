@@ -132,8 +132,12 @@ module.exports = {
                   link: '/algorithm/link-list/206.反转链表'
                 },
                 {
-                  text: '21.合并两个有序链表',
+                  text: '21.合并两个有序链表 2021.12.04',
                   link: '/algorithm/link-list/21.合并两个有序链表'
+                },
+                {
+                  text: '234.回文链表 2021.12.04',
+                  link: '/algorithm/link-list/234.回文链表'
                 }
               ]
             }
