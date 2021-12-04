@@ -8,6 +8,11 @@ module.exports = {
       { text: "首页", link: "/" },
       { text: "javascript", link: "/javascript/" },
       { text: "数据结构与算法", link: "/algorithm/" },
+      {
+        text: "github",
+        link: "https://github.com/hefeng6500/interview-blog",
+        isExternal: true,
+      },
     ],
     sidebar: {
       javascript: [
@@ -116,35 +121,34 @@ module.exports = {
               ],
             },
             {
-              text: '链表',
+              text: "链表",
               children: [
                 {
-                  text: '237.删除链表中的节点 2021.11.29',
-                  link: '/algorithm/link-list/237.删除链表中的节点'
+                  text: "237.删除链表中的节点 2021.11.29",
+                  link: "/algorithm/link-list/237.删除链表中的节点",
                 },
                 {
                   // 19.删除链表的倒数第 N 个结点
-                  text: '19.删除链表的倒数第 N 个结点 2021.11.29',
-                  link: '/algorithm/link-list/19.删除链表的倒数第 N 个结点'
+                  text: "19.删除链表的倒数第 N 个结点 2021.11.29",
+                  link: "/algorithm/link-list/19.删除链表的倒数第 N 个结点",
                 },
                 {
-                  text: '206.反转链表 2021.12.03',
-                  link: '/algorithm/link-list/206.反转链表'
+                  text: "206.反转链表 2021.12.03",
+                  link: "/algorithm/link-list/206.反转链表",
                 },
                 {
-                  text: '21.合并两个有序链表 2021.12.04',
-                  link: '/algorithm/link-list/21.合并两个有序链表'
+                  text: "21.合并两个有序链表 2021.12.04",
+                  link: "/algorithm/link-list/21.合并两个有序链表",
                 },
                 {
-                  text: '234.回文链表 2021.12.04',
-                  link: '/algorithm/link-list/234.回文链表'
-                }
-              ]
-            }
+                  text: "234.回文链表 2021.12.04",
+                  link: "/algorithm/link-list/234.回文链表",
+                },
+              ],
+            },
           ],
         },
       ],
-      
     },
   },
 };
