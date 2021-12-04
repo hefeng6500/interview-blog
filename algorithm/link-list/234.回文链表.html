@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>234.回文链表 | 前端学习记录</title>
+    <meta name="description" content="hefeng6500 的前端学习笔记，记录学习历程，分享学习总结！">
+    <link rel="stylesheet" href="/interview-blog/assets/style.cc744c87.css">
+    <link rel="modulepreload" href="/interview-blog/assets/Home.70e7acf3.js">
+    <link rel="modulepreload" href="/interview-blog/assets/app.348e0a18.js">
+    <link rel="modulepreload" href="/interview-blog/assets/algorithm_link-list_234.回文链表.md.bfcdf587.lean.js">
+    <link rel="modulepreload" href="/interview-blog/assets/app.348e0a18.js">
+    <meta name="twitter:title" content="234.回文链表 | 前端学习记录">
+    <meta property="og:title" content="234.回文链表 | 前端学习记录">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-675d8756><div class="sidebar-button" data-v-675d8756><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/interview-blog/" aria-label="前端学习记录, back to home" data-v-675d8756 data-v-4a583abe><!----> 前端学习记录</a><div class="flex-grow" data-v-675d8756></div><div class="nav" data-v-675d8756><nav class="nav-links" data-v-675d8756 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/" data-v-b8818f8c>首页 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/javascript/" data-v-b8818f8c>javascript <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item active" href="/interview-blog/algorithm/" data-v-b8818f8c>数据结构与算法 <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--]--></header><aside class="sidebar" data-v-83e92a68><nav class="nav-links nav" data-v-83e92a68 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/" data-v-b8818f8c>首页 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/javascript/" data-v-b8818f8c>javascript <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item active" href="/interview-blog/algorithm/" data-v-b8818f8c>数据结构与算法 <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><ul class="sidebar-links" data-v-83e92a68><!--[--><li class="sidebar-link"><p class="sidebar-link-item">数据结构</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/data-structures/stack">栈</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/data-structures/queue">队列</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">算法</p><ul class="sidebar-links"><li class="sidebar-link"><p class="sidebar-link-item">数组</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/217.存在重复元素">217.存在重复元素 2021.11.07</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/136.只出现一次的数字">136.只出现一次的数字 2021.11.08</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/350. 两个数组的交集 II">350. 两个数组的交集 II 2021.11.09</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/66.加一">66. 加一 2021.11.10</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/283.移动零">283.移动零 2021.11.11</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/1.两数之和">1.两数之和 2021.11.12</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/36.有效的数独">36.有效的数独 2021.11.21</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/array/48.旋转图像">48.旋转图像 2021.11.21</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">字符串</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/string/344.反转字符串">344.反转字符串 2021.11.22</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/string/7.整数反转">7.整数反转 2021.11.23</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/string/387.字符串中的第一个唯一字符">387.字符串中的第一个唯一字符 2021.11.23</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/string/242.有效的字母异位词">242.有效的字母异位词 2021.11.24</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/string/125.验证回文串">125.验证回文串 2021.11.25</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/string/8.字符串转换整数 (atoi)">8.字符串转换整数 (atoi) 2021.11.27</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/string/38.外观数列">38.外观数列 2021.11.28</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/string/14.最长公共前缀">14.最长公共前缀 2021.11.28</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">链表</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/link-list/237.删除链表中的节点">237.删除链表中的节点 2021.11.29</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/link-list/19.删除链表的倒数第 N 个结点">19.删除链表的倒数第 N 个结点 2021.11.29</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/link-list/206.反转链表">206.反转链表 2021.12.03</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/interview-blog/algorithm/link-list/21.合并两个有序链表">21.合并两个有序链表 2021.12.04</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item active" href="/interview-blog/algorithm/link-list/234.回文链表">234.回文链表 2021.12.04</a><!----></li></ul></li></ul></li><!--]--></ul><!--[--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main class="page" data-v-7eddb2c4><div class="container" data-v-7eddb2c4><!--[--><!--]--><div style="position:relative;" class="content" data-v-7eddb2c4><div><h1 id="_234-回文链表" tabindex="-1">234.回文链表 <a class="header-anchor" href="#_234-回文链表" aria-hidden="true">#</a></h1><p>给你一个单链表的头节点 head ，请你判断该链表是否为回文链表。如果是，返回 true ；否则，返回 false 。</p><p><strong>示例 1：</strong></p><div class="language-"><pre><code>输入：head = [1,2,2,1]
+输出：true
+</code></pre></div><p><strong>示例 2：</strong></p><div class="language-"><pre><code>输入：head = [1,2]
+输出：false
+</code></pre></div><p>提示：</p><p>链表中节点数目在范围[1, 105] 内 0 &lt;= Node.val &lt;= 9</p><p><strong>进阶：</strong> 你能否用  O(n) 时间复杂度和 O(1) 空间复杂度解决此题？</p><h3 id="解法" tabindex="-1">解法 <a class="header-anchor" href="#解法" aria-hidden="true">#</a></h3><p><strong>解法一：将回文链表问题转成回文字符串问题</strong></p><div class="language-js"><pre><code><span class="token comment">/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */</span>
+<span class="token comment">/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">isPalindrome</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">head</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> queue <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    queue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>head<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    head <span class="token operator">=</span> head<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> queue<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> queue<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>解法二： 国际站的 most votes</strong></p><p>This can be solved by reversing the 2nd half and compare the two halves. Let&#39;s start with an example [1, 1, 2, 1].</p><p>In the beginning, set two pointers <code>fast</code> and <code>slow</code> starting at the head.</p><div class="language-"><pre><code>1 -&gt; 1 -&gt; 2 -&gt; 1 -&gt; null
+sf
+</code></pre></div><p>(1) <strong>Move:</strong> fast pointer goes to the end, and <code>slow</code> goes to the middle.</p><div class="language-"><pre><code>1 -&gt; 1 -&gt; 2 -&gt; 1 -&gt; null
+          s          f
+</code></pre></div><p>(2) <strong>Reverse:</strong> the right half is reversed, and slow pointer becomes the 2nd head.</p><div class="language-"><pre><code>1 -&gt; 1    null &lt;- 2 &lt;- 1
+h                      s
+</code></pre></div><p>(3) <strong>Compare:</strong> run the two pointers head and slow together and compare.</p><div class="language-"><pre><code>1 -&gt; 1    null &lt;- 2 &lt;- 1
+     h            s
+</code></pre></div><div class="language-js"><pre><code><span class="token comment">/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */</span>
+<span class="token comment">/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">isPalindrome</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">head</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> fast <span class="token operator">=</span> head<span class="token punctuation">,</span>
+    slow <span class="token operator">=</span> head<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>fast <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> fast<span class="token punctuation">.</span>next <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fast <span class="token operator">=</span> fast<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    slow <span class="token operator">=</span> slow<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>fast <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// odd nodes: let right half smaller</span>
+    slow <span class="token operator">=</span> slow<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  slow <span class="token operator">=</span> <span class="token function">reverse</span><span class="token punctuation">(</span>slow<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  fast <span class="token operator">=</span> head<span class="token punctuation">;</span>
+
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>slow <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>fast<span class="token punctuation">.</span>val <span class="token operator">!=</span> slow<span class="token punctuation">.</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    fast <span class="token operator">=</span> fast<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    slow <span class="token operator">=</span> slow<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">reverse</span><span class="token punctuation">(</span><span class="token parameter">head</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> prev <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>head <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> next <span class="token operator">=</span> head<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    head<span class="token punctuation">.</span>next <span class="token operator">=</span> prev<span class="token punctuation">;</span>
+    prev <span class="token operator">=</span> head<span class="token punctuation">;</span>
+    head <span class="token operator">=</span> next<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> prev<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><!----></div></footer><div class="next-and-prev-link" data-v-7eddb2c4 data-v-38ede35f><div class="container" data-v-38ede35f><div class="prev" data-v-38ede35f><a class="link" href="/interview-blog/algorithm/link-list/21.合并两个有序链表" data-v-38ede35f><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-prev" data-v-38ede35f><path d="M19,11H7.4l5.3-5.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-7,7c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.2-0.1,0.5,0,0.8c0.1,0.1,0.1,0.2,0.2,0.3l7,7c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L7.4,13H19c0.6,0,1-0.4,1-1S19.6,11,19,11z"></path></svg><span class="text" data-v-38ede35f>21.合并两个有序链表 2021.12.04</span></a></div><div class="next" data-v-38ede35f><!----></div></div></div><!--[--><!--[--><div><!----></div><!--]--><!--[--><!----><!--]--><!--]--></div></main></div><!----><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"algorithm_array_1.两数之和.md\":\"f78f32ff\",\"algorithm_array_136.只出现一次的数字.md\":\"caf35b73\",\"algorithm_array_217.存在重复元素.md\":\"546cd07c\",\"algorithm_array_283.移动零.md\":\"0616d765\",\"algorithm_array_350. 两个数组的交集 ii.md\":\"84a8add9\",\"algorithm_array_36.有效的数独.md\":\"8af0f4d7\",\"algorithm_array_48.旋转图像.md\":\"ce9648b9\",\"algorithm_array_66.加一.md\":\"12e2ed3d\",\"algorithm_index.md\":\"4209e837\",\"algorithm_link-list_19.删除链表的倒数第 n 个结点.md\":\"320ce072\",\"algorithm_link-list_206.反转链表.md\":\"15fdda2e\",\"algorithm_link-list_21.合并两个有序链表.md\":\"52d30a74\",\"algorithm_link-list_234.回文链表.md\":\"bfcdf587\",\"algorithm_link-list_237.删除链表中的节点.md\":\"d48d97f5\",\"algorithm_string_125.验证回文串.md\":\"32697e90\",\"algorithm_string_14.最长公共前缀.md\":\"f7e2fd4b\",\"algorithm_string_242.有效的字母异位词.md\":\"9b594487\",\"algorithm_string_344.反转字符串.md\":\"73eaf482\",\"algorithm_string_38.外观数列.md\":\"dcc97f62\",\"algorithm_string_387.字符串中的第一个唯一字符.md\":\"4f1d0655\",\"algorithm_string_7.整数反转.md\":\"658c3a0b\",\"algorithm_string_8.字符串转换整数 (atoi).md\":\"30d6fa41\",\"data-structures_queue.md\":\"7ad29d26\",\"data-structures_stack.md\":\"e4a2b593\",\"index.md\":\"f3eb81d1\",\"javascript_1.md\":\"6916f4f2\",\"javascript_10.md\":\"cfe02f1b\",\"javascript_2.md\":\"259dd5c4\",\"javascript_3.md\":\"2d8857e7\",\"javascript_4.md\":\"b27bd55b\",\"javascript_5.md\":\"6968a50e\",\"javascript_6.md\":\"166ab049\",\"javascript_7.md\":\"e9f3cf6b\",\"javascript_8.md\":\"6a43fb9c\",\"javascript_9.md\":\"3d5127ad\",\"javascript_index.md\":\"6d691b21\"}")</script>
+    <script type="module" async src="/interview-blog/assets/app.348e0a18.js"></script>
+    
+  </body>
+</html>
