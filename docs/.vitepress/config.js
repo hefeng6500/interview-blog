@@ -130,6 +130,10 @@ module.exports = {
                 {
                   text: '206.反转链表 2021.12.03',
                   link: '/algorithm/link-list/206.反转链表'
+                },
+                {
+                  text: '21.合并两个有序链表',
+                  link: '/algorithm/link-list/21.合并两个有序链表'
                 }
               ]
             }
