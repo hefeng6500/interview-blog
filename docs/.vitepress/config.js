@@ -144,6 +144,10 @@ module.exports = {
                   text: "234.回文链表 2021.12.04",
                   link: "/algorithm/link-list/234.回文链表",
                 },
+                {
+                  text: "141.环形链表 2021.12.05",
+                  link: "/algorithm/link-list/141.环形链表",
+                },
               ],
             },
           ],
