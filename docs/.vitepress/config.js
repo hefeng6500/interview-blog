@@ -150,6 +150,15 @@ module.exports = {
                 },
               ],
             },
+            {
+              text: '树',
+              children: [
+                {
+                  text: "104.二叉树的最大深度 2021.12.07",
+                  link: "/algorithm/tree/104.二叉树的最大深度",
+                }
+              ]
+            }
           ],
         },
       ],
