@@ -161,6 +161,14 @@ module.exports = {
                   text: "98.验证二叉搜索树 2021.12.08",
                   link: "/algorithm/tree/98.验证二叉搜索树",
                 },
+                {
+                  text: "101.对称二叉树 2021.12.09",
+                  link: "/algorithm/tree/101.对称二叉树",
+                },
+                {
+                  text: "102.二叉树的层序遍历 2021.12.10",
+                  link: "/algorithm/tree/102.二叉树的层序遍历",
+                }
               ],
             },
           ],
