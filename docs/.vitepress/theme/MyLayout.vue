@@ -1,12 +1,22 @@
 <script setup>
 import { watch, nextTick, ref } from "vue";
 import DefaultTheme from "vitepress/theme";
+import md5 from "md5";
 import Comment from "../../components/comment/index.vue";
 import { useRouter } from "vitepress";
 
 const { Layout } = DefaultTheme;
 const enableComment = ref(true);
 let { route } = useRouter();
+let badge = ref("");
+
+const generateBadge = (path) => {
+  const id = md5(location.href);
+
+  return `https://visitor-badge.glitch.me/badge?page_id=${id}`;
+};
+
+generateBadge(route.path);
 
 watch(
   route,
@@ -15,6 +25,8 @@ watch(
     nextTick(() => {
       enableComment.value = true;
     });
+
+    badge.value = generateBadge(route.path);
   },
   { immediate: true }
 );
@@ -26,6 +38,15 @@ watch(
       <div>
         <Comment v-if="enableComment" />
       </div>
+      <div class="record">
+        <img v-if="badge" :src="badge" alt />
+      </div>
     </template>
   </Layout>
 </template>
+
+<style scoped>
+.record {
+  text-align: center;
+}
+</style>
