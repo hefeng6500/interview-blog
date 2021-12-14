@@ -50,35 +50,35 @@ module.exports = {
               text: "数组",
               children: [
                 {
-                  text: "217.存在重复元素 2021.11.07",
+                  text: "217.存在重复元素 11.07",
                   link: "/algorithm/array/217.存在重复元素",
                 },
                 {
-                  text: "136.只出现一次的数字 2021.11.08",
+                  text: "136.只出现一次的数字 11.08",
                   link: "/algorithm/array/136.只出现一次的数字",
                 },
                 {
-                  text: "350. 两个数组的交集 II 2021.11.09",
+                  text: "350. 两个数组的交集 II 11.09",
                   link: "/algorithm/array/350. 两个数组的交集 II",
                 },
                 {
-                  text: "66. 加一 2021.11.10",
+                  text: "66. 加一 11.10",
                   link: "/algorithm/array/66.加一",
                 },
                 {
-                  text: "283.移动零 2021.11.11",
+                  text: "283.移动零 11.11",
                   link: "/algorithm/array/283.移动零",
                 },
                 {
-                  text: "1.两数之和 2021.11.12",
+                  text: "1.两数之和 11.12",
                   link: "/algorithm/array/1.两数之和",
                 },
                 {
-                  text: "36.有效的数独 2021.11.21",
+                  text: "36.有效的数独 11.21",
                   link: "/algorithm/array/36.有效的数独",
                 },
                 {
-                  text: "48.旋转图像 2021.11.21",
+                  text: "48.旋转图像 11.21",
                   link: "/algorithm/array/48.旋转图像",
                 },
               ],
@@ -87,35 +87,35 @@ module.exports = {
               text: "字符串",
               children: [
                 {
-                  text: "344.反转字符串 2021.11.22",
+                  text: "344.反转字符串 11.22",
                   link: "/algorithm/string/344.反转字符串",
                 },
                 {
-                  text: "7.整数反转 2021.11.23",
+                  text: "7.整数反转 11.23",
                   link: "/algorithm/string/7.整数反转",
                 },
                 {
-                  text: "387.字符串中的第一个唯一字符 2021.11.23",
+                  text: "387.字符串中的第一个唯一字符 11.23",
                   link: "/algorithm/string/387.字符串中的第一个唯一字符",
                 },
                 {
-                  text: "242.有效的字母异位词 2021.11.24",
+                  text: "242.有效的字母异位词 11.24",
                   link: "/algorithm/string/242.有效的字母异位词",
                 },
                 {
-                  text: "125.验证回文串 2021.11.25",
+                  text: "125.验证回文串 11.25",
                   link: "/algorithm/string/125.验证回文串",
                 },
                 {
-                  text: "8.字符串转换整数 (atoi) 2021.11.27",
+                  text: "8.字符串转换整数 (atoi) 11.27",
                   link: "/algorithm/string/8.字符串转换整数 (atoi)",
                 },
                 {
-                  text: "38.外观数列 2021.11.28",
+                  text: "38.外观数列 11.28",
                   link: "/algorithm/string/38.外观数列",
                 },
                 {
-                  text: "14.最长公共前缀 2021.11.28",
+                  text: "14.最长公共前缀 11.28",
                   link: "/algorithm/string/14.最长公共前缀",
                 },
               ],
@@ -124,28 +124,28 @@ module.exports = {
               text: "链表",
               children: [
                 {
-                  text: "237.删除链表中的节点 2021.11.29",
+                  text: "237.删除链表中的节点 11.29",
                   link: "/algorithm/link-list/237.删除链表中的节点",
                 },
                 {
                   // 19.删除链表的倒数第 N 个结点
-                  text: "19.删除链表的倒数第 N 个结点 2021.11.29",
+                  text: "19.删除链表的倒数第 N 个结点 11.29",
                   link: "/algorithm/link-list/19.删除链表的倒数第 N 个结点",
                 },
                 {
-                  text: "206.反转链表 2021.12.03",
+                  text: "206.反转链表 12.03",
                   link: "/algorithm/link-list/206.反转链表",
                 },
                 {
-                  text: "21.合并两个有序链表 2021.12.04",
+                  text: "21.合并两个有序链表 12.04",
                   link: "/algorithm/link-list/21.合并两个有序链表",
                 },
                 {
-                  text: "234.回文链表 2021.12.04",
+                  text: "234.回文链表 12.04",
                   link: "/algorithm/link-list/234.回文链表",
                 },
                 {
-                  text: "141.环形链表 2021.12.05",
+                  text: "141.环形链表 12.05",
                   link: "/algorithm/link-list/141.环形链表",
                 },
               ],
@@ -154,27 +154,36 @@ module.exports = {
               text: "树",
               children: [
                 {
-                  text: "104.二叉树的最大深度 2021.12.07",
+                  text: "104.二叉树的最大深度 12.07",
                   link: "/algorithm/tree/104.二叉树的最大深度",
                 },
                 {
-                  text: "98.验证二叉搜索树 2021.12.08",
+                  text: "98.验证二叉搜索树 12.08",
                   link: "/algorithm/tree/98.验证二叉搜索树",
                 },
                 {
-                  text: "101.对称二叉树 2021.12.09",
+                  text: "101.对称二叉树 12.09",
                   link: "/algorithm/tree/101.对称二叉树",
                 },
                 {
-                  text: "102.二叉树的层序遍历 2021.12.10",
+                  text: "102.二叉树的层序遍历 12.10",
                   link: "/algorithm/tree/102.二叉树的层序遍历",
                 },
                 {
-                  text: "108.将有序数组转换为二叉搜索树 2021.12.12",
+                  text: "108.将有序数组转换为二叉搜索树 12.12",
                   link: "/algorithm/tree/108.将有序数组转换为二叉搜索树"
                 }
               ],
             },
+            {
+              text: "排序和搜索",
+              children: [
+                {
+                  text: "88.合并两个有序数组 12.14",
+                  link: "/algorithm/sort-and-search/88.合并两个有序数组"
+                }
+              ]
+            }
           ],
         },
       ],
