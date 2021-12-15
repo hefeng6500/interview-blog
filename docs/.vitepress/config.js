@@ -171,8 +171,8 @@ module.exports = {
                 },
                 {
                   text: "108.将有序数组转换为二叉搜索树 12.12",
-                  link: "/algorithm/tree/108.将有序数组转换为二叉搜索树"
-                }
+                  link: "/algorithm/tree/108.将有序数组转换为二叉搜索树",
+                },
               ],
             },
             {
@@ -180,10 +180,14 @@ module.exports = {
               children: [
                 {
                   text: "88.合并两个有序数组 12.14",
-                  link: "/algorithm/sort-and-search/88.合并两个有序数组"
-                }
-              ]
-            }
+                  link: "/algorithm/sort-and-search/88.合并两个有序数组",
+                },
+                {
+                  text: "278.第一个错误的版本",
+                  link: "/algorithm/sort-and-search/278.第一个错误的版本",
+                },
+              ],
+            },
           ],
         },
       ],

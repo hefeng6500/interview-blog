@@ -1,46 +1,33 @@
+
+function isBadVersion(s) {
+  return s === 4;
+}
+
 /**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
+ * @param {function} isBadVersion()
+ * @return {function}
  */
-/**
- * @param {ListNode} head
- * @param {number} n
- * @return {ListNode}
- */
-var removeNthFromEnd = function (head, n) {
-  const getSize = (head) => {
-    let size = 0;
-    const helper = (node) => {
-      if (node.next) {
-        size++;
-        return helper(node.next);
+var solution = function (isBadVersion) {
+  return function (n) {
+    const helper = (n, start, end) => {
+      if (start === end) {
+        return start;
+      }
+      let index = Math.floor(start + (end - start) / 2);
+      console.log(index);
+      let bad = isBadVersion(index);
+      if (!bad) {
+        // 好的
+        return helper(n, index+1, end);
       } else {
-        return size;
+        // 坏的
+        return helper(n, start, index);
       }
     };
-
-    if (head === undefined) {
-      return size;
-    } else {
-      return helper(head);
-    }
+    return helper(n, 0, n);
   };
-
-  let current = head;
-  let index = 0;
-  const targetIndex = getSize() - n;
-
-  while (index < targetIndex) {
-    current = current.next;
-  }
-
-  current.val = current.next.val;
-  current.next = current.next.next;
-
-  return head;
 };
 
-console.log(removeNthFromEnd([1, 2, 3, 4, 5], 2));
+const res = solution(isBadVersion);
+res(5)
+
