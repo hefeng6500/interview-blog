@@ -1,33 +1,22 @@
-
-function isBadVersion(s) {
-  return s === 4;
-}
-
 /**
- * @param {function} isBadVersion()
- * @return {function}
+ * @param {number} n
+ * @return {number}
  */
-var solution = function (isBadVersion) {
-  return function (n) {
-    const helper = (n, start, end) => {
-      if (start === end) {
-        return start;
-      }
-      let index = Math.floor(start + (end - start) / 2);
-      console.log(index);
-      let bad = isBadVersion(index);
-      if (!bad) {
-        // 好的
-        return helper(n, index+1, end);
-      } else {
-        // 坏的
-        return helper(n, start, index);
-      }
-    };
-    return helper(n, 0, n);
-  };
+var climbStairs = function (n) {
+  if (n <= 2) {
+    return n;
+  }
+  let first = 1;
+  let second = 2;
+  let sum = 0;
+
+  if (n > 2) {
+    sum = first + second;
+    first = second;
+    second = sum;
+    n--;
+  }
+  return sum;
 };
 
-const res = solution(isBadVersion);
-res(5)
-
+climbStairs(4);

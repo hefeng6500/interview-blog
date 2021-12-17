@@ -183,11 +183,20 @@ module.exports = {
                   link: "/algorithm/sort-and-search/88.合并两个有序数组",
                 },
                 {
-                  text: "278.第一个错误的版本",
+                  text: "278.第一个错误的版本 12.15",
                   link: "/algorithm/sort-and-search/278.第一个错误的版本",
                 },
               ],
             },
+            {
+              text: '动态规划',
+              children: [
+                {
+                  text: "70.爬楼梯 12.16",
+                  link: '/algorithm/dynamic-programming/70.爬楼梯'
+                }
+              ]
+            }
           ],
         },
       ],
