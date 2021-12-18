@@ -18,4 +18,6 @@ git commit -m 'from local deploy'
 
 git push -f git@gitee.com:hefeng6500/interview-blog.git master:gh-pages
 
+git push origin main
+
 cd -
