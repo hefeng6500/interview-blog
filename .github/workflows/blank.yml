@@ -35,8 +35,20 @@ jobs:
         yarn
         yarn build
         
-    - name: Deploy 🚀
+    - name: Deploy To Github.io 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         BRANCH: gh-pages
         FOLDER: docs/.vitepress/dist
+
+    - name: Deploy To Gitee.io 🚀
+      uses: Yikun/hub-mirror-action@master
+      with: 
+        src: 'github/hefeng6500'
+        dst: 'gitee/hefeng6500'
+        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+        dst_token:  ${{ secrets.GITEE_TOKEN }}
+        static_list: "interview-blog"
+        force_update: true
+      debug: true
+      
