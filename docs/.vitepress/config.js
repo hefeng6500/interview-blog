@@ -194,6 +194,10 @@ module.exports = {
                 {
                   text: "70.爬楼梯 12.16",
                   link: '/algorithm/dynamic-programming/70.爬楼梯'
+                },
+                {
+                  text: '121.买卖股票的最佳时机 12.18',
+                  link: '/algorithm/dynamic-programming/121.买卖股票的最佳时机'
                 }
               ]
             }
