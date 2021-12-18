@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'from local deploy'
 
-git push -f git@gitee.com:hefeng6500/interview-blog.git master:gh-pages
+git push -f git@github.com:hefeng6500/interview-blog.git master:gh-pages
 
 cd -
