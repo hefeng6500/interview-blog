@@ -50,5 +50,5 @@ jobs:
         dst_token:  ${{ secrets.GITEE_TOKEN }}
         static_list: "interview-blog"
         force_update: true
-      debug: true
+        debug: true
       
