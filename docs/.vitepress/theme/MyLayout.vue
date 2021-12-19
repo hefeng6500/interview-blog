@@ -5,11 +5,17 @@ import md5 from "md5";
 import Comment from "../../components/comment/index.vue";
 import UtterancCommment from "../../components/UtterancCommment/index.vue";
 import { useRouter } from "vitepress";
+import { onMounted } from "vue";
+import { generateTongji } from "../utils";
 
 const { Layout } = DefaultTheme;
 const enableComment = ref(true);
 let { route } = useRouter();
 let badge = ref("");
+
+onMounted(() => {
+  generateTongji();
+});
 
 const generateBadge = (path) => {
   const id = md5(path);
@@ -31,16 +37,6 @@ watch(
   },
   { immediate: true }
 );
-</script>
-
-<script>
-var _hmt = _hmt || [];
-(function () {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?1de472432e76a93aa5f97f550145dfb4";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
 </script>
 
 <template>
