@@ -3,6 +3,7 @@ import { watch, nextTick, ref } from "vue";
 import DefaultTheme from "vitepress/theme";
 import md5 from "md5";
 import Comment from "../../components/comment/index.vue";
+import UtterancCommment from "../../components/UtterancCommment/index.vue"
 import { useRouter } from "vitepress";
 
 const { Layout } = DefaultTheme;
@@ -11,7 +12,7 @@ let { route } = useRouter();
 let badge = ref("");
 
 const generateBadge = (path) => {
-  const id = md5(location.href);
+  const id = md5(path);
 
   return `https://visitor-badge.glitch.me/badge?page_id=${id}`;
 };
@@ -36,7 +37,8 @@ watch(
   <Layout>
     <template #page-bottom>
       <div>
-        <Comment v-if="enableComment" />
+        <!-- <Comment v-if="enableComment" /> -->
+        <UtterancCommment v-if="enableComment" />
       </div>
       <div class="record">
         <img v-if="badge" :src="badge" alt />
