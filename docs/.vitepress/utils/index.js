@@ -15,6 +15,7 @@ const useGoogleTongji = () => {
   const helper = (id) => {
     const script = document.createElement("script");
     script.async = true;
+    script.type = "text/javascript";
     script.src = `https://www.googletagmanager.com/gtag/js?${id}`;
 
     window.dataLayer = window.dataLayer || [];
