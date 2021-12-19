@@ -3,9 +3,7 @@ import { watch, nextTick, ref } from "vue";
 import DefaultTheme from "vitepress/theme";
 import md5 from "md5";
 import Comment from "../../components/comment/index.vue";
-import UtterancCommment from "../../components/UtterancCommment/index.vue"
-import Statistics from "../../components/Stastistics/index.vue"
-
+import UtterancCommment from "../../components/UtterancCommment/index.vue";
 import { useRouter } from "vitepress";
 
 const { Layout } = DefaultTheme;
@@ -35,13 +33,22 @@ watch(
 );
 </script>
 
+<script>
+var _hmt = _hmt || [];
+(function () {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1de472432e76a93aa5f97f550145dfb4";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 <template>
   <Layout>
     <template #page-bottom>
       <div>
         <!-- <Comment v-if="enableComment" /> -->
         <UtterancCommment v-if="enableComment" />
-        <Statistics />
       </div>
       <div class="record">
         <img v-if="badge" :src="badge" alt />
