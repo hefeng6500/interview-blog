@@ -4,6 +4,8 @@ import DefaultTheme from "vitepress/theme";
 import md5 from "md5";
 import Comment from "../../components/comment/index.vue";
 import UtterancCommment from "../../components/UtterancCommment/index.vue"
+import Statistics from "../../components/Stastistics/index.vue"
+
 import { useRouter } from "vitepress";
 
 const { Layout } = DefaultTheme;
@@ -39,6 +41,7 @@ watch(
       <div>
         <!-- <Comment v-if="enableComment" /> -->
         <UtterancCommment v-if="enableComment" />
+        <Statistics />
       </div>
       <div class="record">
         <img v-if="badge" :src="badge" alt />
