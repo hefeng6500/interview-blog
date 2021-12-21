@@ -198,6 +198,10 @@ module.exports = {
                 {
                   text: '121.买卖股票的最佳时机 12.18',
                   link: '/algorithm/dynamic-programming/121.买卖股票的最佳时机'
+                },
+                {
+                  text: '53.最大子数组和 12.21',
+                  link: '/algorithm/dynamic-programming/53.最大子数组和'
                 }
               ]
             }
