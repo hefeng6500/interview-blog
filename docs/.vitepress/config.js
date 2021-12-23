@@ -202,6 +202,10 @@ module.exports = {
                 {
                   text: '53.最大子数组和 12.21',
                   link: '/algorithm/dynamic-programming/53.最大子数组和'
+                },
+                {
+                  text: '198.打家劫舍 12.23',
+                  link: '/algorithm/dynamic-programming/198.打家劫舍'
                 }
               ]
             }
