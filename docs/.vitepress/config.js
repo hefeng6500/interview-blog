@@ -189,26 +189,48 @@ module.exports = {
               ],
             },
             {
-              text: '动态规划',
+              text: "动态规划",
               children: [
                 {
                   text: "70.爬楼梯 12.16",
-                  link: '/algorithm/dynamic-programming/70.爬楼梯'
+                  link: "/algorithm/dynamic-programming/70.爬楼梯",
                 },
                 {
-                  text: '121.买卖股票的最佳时机 12.18',
-                  link: '/algorithm/dynamic-programming/121.买卖股票的最佳时机'
+                  text: "121.买卖股票的最佳时机 12.18",
+                  link: "/algorithm/dynamic-programming/121.买卖股票的最佳时机",
                 },
                 {
-                  text: '53.最大子数组和 12.21',
-                  link: '/algorithm/dynamic-programming/53.最大子数组和'
+                  text: "53.最大子数组和 12.21",
+                  link: "/algorithm/dynamic-programming/53.最大子数组和",
                 },
                 {
-                  text: '198.打家劫舍 12.23',
-                  link: '/algorithm/dynamic-programming/198.打家劫舍'
-                }
-              ]
-            }
+                  text: "198.打家劫舍 12.23",
+                  link: "/algorithm/dynamic-programming/198.打家劫舍",
+                },
+              ],
+            },
+            {
+              text: "设计问题",
+              children: [
+                {
+                  text: "384.打乱数组",
+                  link: "/algorithm/design-problem/384.打乱数组",
+                },
+                {
+                  text: "155.最小栈",
+                  link: "/algorithm/design-problem/155.最小栈",
+                },
+              ],
+            },
+            {
+              text: "数学",
+              children: [
+                {
+                  text: "412.Fizz Buzz",
+                  link: "/algorithm/math/412.Fizz Buzz",
+                },
+              ],
+            },
           ],
         },
       ],
