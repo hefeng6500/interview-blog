@@ -1,0 +1,1 @@
+import{_ as t,c as a,o as e}from"./app.9676c88a.js";const f='{"title":"","description":"","frontmatter":{},"relativePath":"javascript/10.md","lastUpdated":1640441904616}',r={};function c(o,s,p,n,_,i){return e(),a("div")}var l=t(r,[["render",c]]);export{f as __pageData,l as default};
