@@ -229,6 +229,11 @@ module.exports = {
                   text: "412.Fizz Buzz",
                   link: "/algorithm/math/412.Fizz Buzz",
                 },
+                {
+                  text: "204.计数质数",
+                  link: "/algorithm/math/204.计数质数",
+                },
+                
               ],
             },
           ],
