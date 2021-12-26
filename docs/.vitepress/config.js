@@ -233,7 +233,10 @@ module.exports = {
                   text: "204.计数质数",
                   link: "/algorithm/math/204.计数质数",
                 },
-                
+                {
+                  text: "326.3 的幂",
+                  link: "/algorithm/math/326.3 的幂",
+                }
               ],
             },
           ],
