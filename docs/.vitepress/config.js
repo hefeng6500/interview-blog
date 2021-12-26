@@ -236,6 +236,10 @@ module.exports = {
                 {
                   text: "326.3 的幂",
                   link: "/algorithm/math/326.3 的幂",
+                },
+                {
+                  text: "13.罗马数字转整数",
+                  link: "/algorithm/math/13.罗马数字转整数",
                 }
               ],
             },
