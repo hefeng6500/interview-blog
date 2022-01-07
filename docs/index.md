@@ -2,8 +2,8 @@
 home: true
 heroImage: /logo.png
 heroAlt: Logo image
-heroText: 前端进阶之路
-tagline: 体系化知识结构
+heroText: 数据结构与算法
+tagline: 前端搞算法
 actionText: 开始
 actionLink: /javascript/
 features:
