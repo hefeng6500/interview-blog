@@ -5,7 +5,7 @@ heroAlt: Logo image
 heroText: 数据结构与算法
 tagline: 前端搞算法
 actionText: 开始
-actionLink: /javascript/
+actionLink: /data-structures/
 features:
   - title: Simplicity First
     details: Minimal setup with markdown-centered project structure helps you focus on writing.
