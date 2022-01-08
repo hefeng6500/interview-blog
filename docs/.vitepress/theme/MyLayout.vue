@@ -53,7 +53,8 @@ watch(
   </Layout>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
 .record {
   text-align: center;
 }
