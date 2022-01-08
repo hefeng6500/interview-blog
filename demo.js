@@ -1,23 +1,16 @@
-var addBinary = function (num1, num2) {
-  let res = "";
-  let i1 = num1.length - 1;
-  let i2 = num2.length - 1;
-  let carry = 0;
-  while (i1 >= 0 || i2 >= 0) {
-    const x = i1 >= 0 ? num1[i1] - "0" : 0;
-    const y = i2 >= 0 ? num2[i2] - "0" : 0;
-
-    const sum = x + y + carry; 
-    res = (sum % 2) + res;
-    carry = Math.floor(sum / 2);
-
-    i1--;
-    i2--;
+var countBits = function(n) {
+  const bits = new Array(n + 1).fill(0);
+  for (let i = 0; i <= n; i++) {
+      bits[i] = countOnes(i);
   }
-  if (carry) {
-    res = carry + res;
-  }
-  return res;
+  return bits
 };
 
-console.log(addBinary("1010", "1011"));
+const countOnes = (x) => {
+  let ones = 0;
+  while (x > 0) {
+      x &= (x - 1);
+      ones++;
+  }
+  return ones;
+}

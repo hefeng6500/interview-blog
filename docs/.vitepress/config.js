@@ -29,6 +29,10 @@ module.exports = {
                 {
                   text: '二进制加法',
                   link: "/data-structures/integer/二进制加法",
+                },
+                {
+                  text: '前n个数字二进制中1的个数',
+                  link: "/data-structures/integer/前n个数字二进制中1的个数",
                 }
               ],
             },
