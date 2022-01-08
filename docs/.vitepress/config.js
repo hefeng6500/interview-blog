@@ -26,6 +26,10 @@ module.exports = {
                   text: "整数除法",
                   link: "/data-structures/integer/整数除法",
                 },
+                {
+                  text: '二进制加法',
+                  link: "/data-structures/integer/二进制加法",
+                }
               ],
             },
             {
