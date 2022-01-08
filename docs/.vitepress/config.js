@@ -185,7 +185,7 @@ module.exports = {
                   link: "/algorithm/sort-and-search/88.合并两个有序数组",
                 },
                 {
-                  text: "278.第一个错误的版本",
+                  text: "278.第一个错误的版本qwe",
                   link: "/algorithm/sort-and-search/278.第一个错误的版本",
                 },
               ],
