@@ -20,6 +20,15 @@ module.exports = {
           text: "数据结构专题",
           children: [
             {
+              text: "整数",
+              children: [
+                {
+                  text: "整数除法",
+                  link: "/data-structures/integer/整数除法",
+                },
+              ],
+            },
+            {
               text: "栈和队列",
               children: [
                 {
