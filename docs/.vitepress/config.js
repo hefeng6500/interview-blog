@@ -35,6 +35,14 @@ module.exports = {
                   link: "/data-structures/integer/前n个数字二进制中1的个数",
                 },
                 {
+                  text: '只出现一次的数字',
+                  link: "/data-structures/integer/只出现一次的数字",
+                },
+                {
+                  text: '单词长度的最大乘积',
+                  link: "/data-structures/integer/单词长度的最大乘积",
+                },
+                {
                   text: "排序数组中两个数字之和",
                   link: "/data-structures/integer/排序数组中两个数字之和",
                   
