@@ -33,6 +33,11 @@ module.exports = {
                 {
                   text: '前n个数字二进制中1的个数',
                   link: "/data-structures/integer/前n个数字二进制中1的个数",
+                },
+                {
+                  text: "排序数组中两个数字之和",
+                  link: "/data-structures/integer/排序数组中两个数字之和",
+                  
                 }
               ],
             },

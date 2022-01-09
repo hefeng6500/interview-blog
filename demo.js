@@ -1,16 +1,19 @@
-var countBits = function(n) {
-  const bits = new Array(n + 1).fill(0);
-  for (let i = 0; i <= n; i++) {
-      bits[i] = countOnes(i);
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var singleNumber = function (nums) {
+  const map = {};
+  for (let i = 0; i < nums.length; i++) {
+    let value = nums[i];
+    map[value] = map[value] === undefined ? 1 : ++map[value];
   }
-  return bits
+
+  for (const key in map) {
+    if (map[key] === 1) {
+      return key;
+    }
+  }
 };
 
-const countOnes = (x) => {
-  let ones = 0;
-  while (x > 0) {
-      x &= (x - 1);
-      ones++;
-  }
-  return ones;
-}
+console.log(singleNumber([2, 2, 3, 2]));;
