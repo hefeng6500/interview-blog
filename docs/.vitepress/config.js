@@ -8,6 +8,7 @@ module.exports = {
       { text: "首页", link: "/" },
       { text: "数据结构", link: "/data-structures/" },
       { text: "算法", link: "/algorithm/" },
+      { text: "Tecent-50", link: "/tecent-50/" },
       {
         text: "GitHub",
         link: "https://github.com/hefeng6500/interview-blog",
@@ -269,6 +270,17 @@ module.exports = {
           ],
         },
       ],
+      "tecent-50": [
+        {
+          text: "腾讯精选50题",
+          children: [
+            {
+              text: "2.两数相加",
+              link: "/tecent-50/2.两数相加",
+            }
+          ]
+        }
+      ]
     },
   },
 };
