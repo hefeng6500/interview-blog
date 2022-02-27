@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2. 两数相加 | 算法自由之路</title>
+    <meta name="description" content="hefeng6500 的前端学习笔记，记录学习历程，分享学习总结！">
+    <link rel="stylesheet" href="/interview-blog/assets/style.9bccc3ea.css">
+    <link rel="modulepreload" href="/interview-blog/assets/Home.b14a6022.js">
+    <link rel="modulepreload" href="/interview-blog/assets/app.e1f04613.js">
+    <link rel="modulepreload" href="/interview-blog/assets/tecent-50_2.两数相加.md.400aa251.lean.js">
+    <link rel="modulepreload" href="/interview-blog/assets/app.e1f04613.js">
+    <meta name="twitter:title" content="2. 两数相加 | 算法自由之路">
+    <meta property="og:title" content="2. 两数相加 | 算法自由之路">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-675d8756><div class="sidebar-button" data-v-675d8756><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/interview-blog/" aria-label="算法自由之路, back to home" data-v-675d8756 data-v-4a583abe><!----> 算法自由之路</a><div class="flex-grow" data-v-675d8756></div><div class="nav" data-v-675d8756><nav class="nav-links" data-v-675d8756 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/" data-v-b8818f8c>首页 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/data-structures/" data-v-b8818f8c>数据结构 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/algorithm/" data-v-b8818f8c>算法 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item active" href="/interview-blog/tecent-50/" data-v-b8818f8c>Tecent-50 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item isExternal" href="https://github.com/hefeng6500/interview-blog" target="_blank" rel="noopener noreferrer" data-v-b8818f8c>GitHub <svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15" data-v-b8818f8c><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--]--></header><aside class="sidebar" data-v-83e92a68><nav class="nav-links nav" data-v-83e92a68 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/" data-v-b8818f8c>首页 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/data-structures/" data-v-b8818f8c>数据结构 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview-blog/algorithm/" data-v-b8818f8c>算法 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item active" href="/interview-blog/tecent-50/" data-v-b8818f8c>Tecent-50 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item isExternal" href="https://github.com/hefeng6500/interview-blog" target="_blank" rel="noopener noreferrer" data-v-b8818f8c>GitHub <svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15" data-v-b8818f8c><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><ul class="sidebar-links" data-v-83e92a68><!--[--><li class="sidebar-link"><p class="sidebar-link-item">腾讯精选50题</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item active" href="/interview-blog/tecent-50/2.两数相加">2.两数相加</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#题目">题目</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#思路">思路</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#代码">代码</a><!----></li></ul></li></ul></li><!--]--></ul><!--[--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main class="page" data-v-7eddb2c4><div class="container" data-v-7eddb2c4><!--[--><!--]--><div style="position:relative;" class="content" data-v-7eddb2c4><div><h1 id="_2-两数相加" tabindex="-1">2. 两数相加 <a class="header-anchor" href="#_2-两数相加" aria-hidden="true">#</a></h1><h2 id="题目" tabindex="-1">题目 <a class="header-anchor" href="#题目" aria-hidden="true">#</a></h2><p><a href="https://leetcode-cn.com/problems/add-two-numbers/" target="_blank" rel="noopener noreferrer">2. 两数相加</a></p><p>给你两个  <strong>非空</strong> 的链表，表示两个非负的整数。它们每位数字都是按照  <strong>逆序</strong>  的方式存储的，并且每个节点只能存储  <strong>一位</strong>  数字。</p><p>请你将两个数相加，并以相同形式返回一个表示和的链表。</p><p>你可以假设除了数字 0 之外，这两个数都不会以 0  开头。</p><p><strong>示例 1：</strong></p><p><img src="/interview-blog/assets/addtwonumber1.cca5af59.jpg" alt=""></p><div class="language-"><pre><code>输入：l1 = [2,4,3], l2 = [5,6,4]
+输出：[7,0,8]
+</code></pre></div><div class="language-"><pre><code>解释：342 + 465 = 807.
+</code></pre></div><p><strong>示例 2：</strong></p><div class="language-"><pre><code>输入：l1 = [0], l2 = [0]
+输出：[0]
+</code></pre></div><p>示例 3：</p><div class="language-"><pre><code>输入：l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+输出：[8,9,9,9,0,0,0,1]
+</code></pre></div><p>提示：</p><ul><li>每个链表中的节点数在范围 [1, 100] 内</li><li>0 &lt;= Node.val &lt;= 9</li><li>题目数据保证列表表示的数字不含前导零</li></ul><h2 id="思路" tabindex="-1">思路 <a class="header-anchor" href="#思路" aria-hidden="true">#</a></h2><p>首先看懂题目</p><p>两个链表，分别将十进制数字在链表中逆序排列，链表每个节点是一个一位数，十进制的数字不以 0 开头.</p><p><strong>解题思路：</strong></p><ul><li><p>迭代链表，从链表头部开始，正好是个位数，同时迭代两条链表</p></li><li><p>考虑一条链表迭代完，另外一条还在继续迭代中</p></li><li><p>考虑逢十进一</p></li><li><p>考虑最高位进一</p></li></ul><h2 id="代码" tabindex="-1">代码 <a class="header-anchor" href="#代码" aria-hidden="true">#</a></h2><p><strong>1. 循环</strong></p><div class="language-js"><pre><code><span class="token comment">/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */</span>
+<span class="token comment">/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">addTwoNumbers</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">l1<span class="token punctuation">,</span> l2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> head <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> tail <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">let</span> carry <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>l1 <span class="token operator">||</span> l2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> n1 <span class="token operator">=</span> l1 <span class="token operator">?</span> l1<span class="token punctuation">.</span>val <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> n2 <span class="token operator">=</span> l2 <span class="token operator">?</span> l2<span class="token punctuation">.</span>val <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> sum <span class="token operator">=</span> n1 <span class="token operator">+</span> n2 <span class="token operator">+</span> carry<span class="token punctuation">;</span>
+
+    <span class="token comment">// 构造一个新的链表</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      head <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">NodeList</span><span class="token punctuation">(</span>sum <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      tail<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">NodeList</span><span class="token punctuation">(</span>sum <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      tail <span class="token operator">=</span> tail<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>l1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      l1 <span class="token operator">=</span> l1<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>l2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      l2 <span class="token operator">=</span> l2<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 十进制加法：逢十进一</span>
+    carry <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>sum <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 处理最高位逢十进一的问题</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>carry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    tail<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span>carry<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>2. 递归</strong></p><div class="language-js"><pre><code><span class="token comment">/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */</span>
+<span class="token comment">/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">addTwoNumbers</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">l1<span class="token punctuation">,</span> l2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> carry <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">let</span> <span class="token function-variable function">dfs</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">l1<span class="token punctuation">,</span> l2<span class="token punctuation">,</span> carry</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> n1 <span class="token operator">=</span> l1 <span class="token operator">?</span> l1<span class="token punctuation">.</span>val <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> n2 <span class="token operator">=</span> l2 <span class="token operator">?</span> l2<span class="token punctuation">.</span>val <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> next1 <span class="token operator">=</span> l1 <span class="token operator">?</span> l1<span class="token punctuation">.</span>next <span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> next2 <span class="token operator">=</span> l2 <span class="token operator">?</span> l2<span class="token punctuation">.</span>next <span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> sum <span class="token operator">=</span> n1 <span class="token operator">+</span> n2 <span class="token operator">+</span> carry<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>l1 <span class="token operator">===</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> l2 <span class="token operator">===</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> carry <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> head <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span>sum <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    head<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token function">dfs</span><span class="token punctuation">(</span>next1<span class="token punctuation">,</span> next2<span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>sum <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token function">dfs</span><span class="token punctuation">(</span>l1<span class="token punctuation">,</span> l2<span class="token punctuation">,</span> carry<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><!----></div></footer><!----><!--[--><!--[--><div data-v-c5366fde><!-- <Comment v-if="enableComment" /> --><!----></div><div class="record" data-v-c5366fde><img src="https://visitor-badge.glitch.me/badge?page_id=d7d154482b7e46479486de6d56f157ee" alt data-v-c5366fde></div><!--]--><!--[--><!----><!--]--><!--]--></div></main></div><!----><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"algorithm_design-problem_155.最小栈.md\":\"a2e0b7bc\",\"algorithm_design-problem_384.打乱数组.md\":\"435a5586\",\"algorithm_dynamic-programming_121.买卖股票的最佳时机.md\":\"cd2423cd\",\"algorithm_dynamic-programming_198.打家劫舍.md\":\"dfcf25f4\",\"algorithm_dynamic-programming_53.最大子数组和.md\":\"5c5a5164\",\"algorithm_dynamic-programming_70.爬楼梯.md\":\"a6f0a244\",\"algorithm_index.md\":\"3f6dd0c8\",\"algorithm_math_13.罗马数字转整数.md\":\"cc8fa56d\",\"algorithm_math_204.计数质数.md\":\"b9825109\",\"algorithm_math_326.3 的幂.md\":\"b1bc84b1\",\"algorithm_math_412.fizz buzz.md\":\"ce4eca29\",\"algorithm_sort-and-search_278.第一个错误的版本.md\":\"a7a886b4\",\"algorithm_sort-and-search_88.合并两个有序数组.md\":\"65f16042\",\"data-structures_array_1.两数之和.md\":\"0cfc0e5f\",\"data-structures_array_11.盛最多水的容器.md\":\"823c9c88\",\"data-structures_array_136.只出现一次的数字.md\":\"51a808d7\",\"data-structures_array_217.存在重复元素.md\":\"e08883d7\",\"data-structures_array_283.移动零.md\":\"5ff00fe9\",\"data-structures_array_350. 两个数组的交集 ii.md\":\"8160fc28\",\"data-structures_array_36.有效的数独.md\":\"48f8f680\",\"data-structures_array_48.旋转图像.md\":\"c1390853\",\"data-structures_array_66.加一.md\":\"61d61f94\",\"data-structures_index.md\":\"e95ee7b6\",\"data-structures_integer_二进制加法.md\":\"681812f0\",\"data-structures_integer_前n个数字二进制中1的个数.md\":\"419b3738\",\"data-structures_integer_单词长度的最大乘积.md\":\"d7efa81c\",\"data-structures_integer_只出现一次的数字.md\":\"8d1e17ed\",\"data-structures_integer_排序数组中两个数字之和.md\":\"2d8de96b\",\"data-structures_integer_整数除法.md\":\"000a8402\",\"data-structures_link-list_141.环形链表.md\":\"2a79bd44\",\"data-structures_link-list_19.删除链表的倒数第 n 个结点.md\":\"3b47d93e\",\"data-structures_link-list_206.反转链表.md\":\"a1606590\",\"data-structures_link-list_21.合并两个有序链表.md\":\"74566c84\",\"data-structures_link-list_234.回文链表.md\":\"84cf4568\",\"data-structures_link-list_237.删除链表中的节点.md\":\"490984cc\",\"data-structures_stack-and-queue_09.用两个栈实现队列.md\":\"4bd8c24f\",\"data-structures_string_125.验证回文串.md\":\"c1911608\",\"data-structures_string_14.最长公共前缀.md\":\"b782ce17\",\"data-structures_string_242.有效的字母异位词.md\":\"8b03ce88\",\"data-structures_string_344.反转字符串.md\":\"5df161d6\",\"data-structures_string_38.外观数列.md\":\"e1bc9706\",\"data-structures_string_387.字符串中的第一个唯一字符.md\":\"e5883b93\",\"data-structures_string_7.整数反转.md\":\"7b658613\",\"data-structures_string_8.字符串转换整数 (atoi).md\":\"5bca120e\",\"data-structures_tree_101.对称二叉树.md\":\"bae3346c\",\"data-structures_tree_102.二叉树的层序遍历.md\":\"0e42f665\",\"data-structures_tree_104.二叉树的最大深度.md\":\"192c3334\",\"data-structures_tree_108.将有序数组转换为二叉搜索树.md\":\"8dce46fc\",\"data-structures_tree_98.验证二叉搜索树.md\":\"5264af17\",\"index.md\":\"acf41a1a\",\"tecent-50_2.两数相加.md\":\"400aa251\",\"tecent-50_index.md\":\"c956b0aa\"}")</script>
+    <script type="module" async src="/interview-blog/assets/app.e1f04613.js"></script>
+    
+  </body>
+</html>
