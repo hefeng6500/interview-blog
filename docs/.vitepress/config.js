@@ -57,6 +57,10 @@ module.exports = {
                   text: "用两个栈实现队列",
                   link: "/data-structures/stack-and-queue/09.用两个栈实现队列",
                 },
+                {
+                  text: "716. 最大栈",
+                  link: "/data-structures/stack-and-queue/716.最大栈",
+                }
               ],
             },
             {
@@ -231,6 +235,10 @@ module.exports = {
                   text: "198.打家劫舍",
                   link: "/algorithm/dynamic-programming/198.打家劫舍",
                 },
+                {
+                  text: "300.最长递增子序列",
+                  link: "/algorithm/dynamic-programming/300.最长递增子序列",
+                }
               ],
             },
             {
