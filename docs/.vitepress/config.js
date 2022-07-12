@@ -28,26 +28,25 @@ module.exports = {
                   link: "/data-structures/integer/整数除法",
                 },
                 {
-                  text: '二进制加法',
+                  text: "二进制加法",
                   link: "/data-structures/integer/二进制加法",
                 },
                 {
-                  text: '前n个数字二进制中1的个数',
+                  text: "前n个数字二进制中1的个数",
                   link: "/data-structures/integer/前n个数字二进制中1的个数",
                 },
                 {
-                  text: '只出现一次的数字',
+                  text: "只出现一次的数字",
                   link: "/data-structures/integer/只出现一次的数字",
                 },
                 {
-                  text: '单词长度的最大乘积',
+                  text: "单词长度的最大乘积",
                   link: "/data-structures/integer/单词长度的最大乘积",
                 },
                 {
                   text: "排序数组中两个数字之和",
                   link: "/data-structures/integer/排序数组中两个数字之和",
-                  
-                }
+                },
               ],
             },
             {
@@ -60,7 +59,7 @@ module.exports = {
                 {
                   text: "716. 最大栈",
                   link: "/data-structures/stack-and-queue/716.最大栈",
-                }
+                },
               ],
             },
             {
@@ -201,6 +200,35 @@ module.exports = {
       ],
       algorithm: [
         {
+          text: "排序算法",
+          children: [
+            {
+              text: "冒泡排序",
+              link: "/algorithm/sort/bubbleSort",
+            },
+            {
+              text: "插入排序",
+              link: "/algorithm/sort/insertionSort",
+            },
+            {
+              text: "选择排序",
+              link: "/algorithm/sort/selectionSort",
+            },
+            {
+              text: "快速排序",
+              link: "/algorithm/sort/quickSort",
+            },
+            {
+              text: "堆排序",
+              link: "/algorithm/sort/heapSort",
+            },
+            {
+              text: "归并排序",
+              link: "/algorithm/sort/mergeSort",
+            },
+          ],
+        },
+        {
           text: "算法",
           children: [
             {
@@ -238,7 +266,7 @@ module.exports = {
                 {
                   text: "300.最长递增子序列",
                   link: "/algorithm/dynamic-programming/300.最长递增子序列",
-                }
+                },
               ],
             },
             {
@@ -285,10 +313,10 @@ module.exports = {
             {
               text: "2.两数相加",
               link: "/tecent-50/2.两数相加",
-            }
-          ]
-        }
-      ]
+            },
+          ],
+        },
+      ],
     },
   },
 };
